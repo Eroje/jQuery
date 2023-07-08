@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Append Text</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width= device-width, initial-scale= 1.0">
+        <script src="https://code.jquery.com/jquery-3.7.0.js" integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM=" crossorigin="anonymous"></script>   
+        
+        <script>
+
+            function appendText() {
+                var txt1 = "<p>This is text along with html markup</p>" //This creates text with HTML
+                var txt2 = $ ("<p></p>").text("This is the text"); //This creats text with jQuery
+                var txt3 = document.createElement("p");
+                txt3.innerHTML = "Text created using the DOM"; //This creates text with the DOM
+                $("body").append(txt1, txt2, txt3); //This appends new elements
+            }
+                
+        </script>
+    </head>
+
+    <body>
+
+        <p>This is a paragraph.</p>
+        <button onclick="appendText ()">Append Text</button>       
+
+    </body>
+
+</html>
